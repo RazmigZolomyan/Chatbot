@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    <category>
+        <pattern>*</pattern>
+        <template>I have no answer for that.</template>
+    </category>
+
+    <category>
+        <pattern>wat *</pattern>
+        <template><srai>What <star/></srai></template>
+    </category>
+    
+    <category>
+        <pattern>_ LOL</pattern>
+        <template><sr/></template>
+    </category>
+    
+    <category>
+        <pattern>LOL _</pattern>
+        <template><sr/></template>
+    </category>
+   
+    <category>
+        <pattern>HI</pattern>
+        <template>
+            <random>
+                <li>Hello</li>
+                <li>Hi</li>
+                <li>Good to see you!</li>
+                <li>How can I help you</li>
+            </random>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>HELLO *</pattern>
+        <template><srai>HI</srai></template>
+    </category>   
+    
+    <category>
+        <pattern>WHAT TIME IS IT</pattern>
+        <template>The time is <date locale="SV_SE" timezone="1" format="%I:%M %p" jformat="h:mm a"/></template>
+    </category>
+    
+    <category>
+        <pattern>WHAT DATE IS IT</pattern>
+        <template>The date is <date locale="SV_SE" timezone="1" format="%D"/></template>
+    </category>
+    
+    <category>
+        <pattern>HOW OLD ARE YOU</pattern>
+        <template>I am <bot name="age"/> months old!</template>
+    </category>
+    
+    <category>
+        <pattern>WHAT IS YOUR AGE</pattern>
+        <template><srai>HOW OLD ARE YOU</srai></template>
+    </category> 
+    
+    <category>
+        <pattern>WHAT IS YOUR NAME</pattern>
+        <template>My name is Raz!</template>
+    </category>
+    
+    <category>
+        <pattern>_ ACTUAL _</pattern>
+        <template><srai><star index="1"/> <star index="2"/></srai></template>
+    </category>
+    
+    <category>
+        <pattern>_ PLEASE</pattern>
+        <template>You are very polite! <srai><star/></srai></template>
+    </category>
+    
+    <category>
+        <pattern>PLEASE _</pattern>
+        <template>You are very polite! <srai><star/></srai></template>
+    </category>
+
+    <category>
+        <pattern>ROLL A DIE</pattern>
+        <template>
+            <random>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+            </random>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>ROLL two DICE</pattern>
+        <template>
+            <random>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+            </random>
+            <random>
+                <li> 1</li>
+                <li> 2</li>
+                <li> 3</li>
+                <li> 4</li>
+                <li> 5</li>
+                <li> 6</li>
+            </random>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>FLIP A COIN</pattern>
+        <template>It is 
+            <random>
+                <li> heads</li>
+                <li> tails</li>
+            </random>    
+        </template>
+    </category>
+    
+    <category>
+        <pattern>FLIP two COINS</pattern>
+        <template>It is 
+            <random>
+                <li> heads </li>
+                <li> tails </li>
+            </random>and
+            <random>
+                <li> heads</li>
+                <li> tails</li>
+            </random> 
+        </template>
+    </category>
+    
+    <category>
+        <pattern>PICK A USER</pattern>
+        <template>
+            <think>
+                <set name="person">
+                    <random>
+                        <li>Raz</li>
+                        <li>Emily</li>
+                        <li>Ronaldinho</li>
+                    </random>
+                </set>
+            </think>
+        The person i chose is <get name="person"/>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>MY NAME IS * *</pattern>
+        <template>Hello <set name="firstname"><star/></set> <set name="lastname"><star index="2"/></set>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>WHAT IS MY NAME</pattern>
+        <template>Your name is <get name="firstname"/>.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>WHAT IS MY LASTNAME</pattern>
+        <template>Your lastname is <get name="lastname"/></template>
+    </category>
+    
+    <category>
+        <pattern>I ATE *</pattern>
+        <template>
+            That sounds yummy.
+            <think><set name="food"><star/></set></think>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>WHAT FOOD DO I LIKE?</pattern>
+        <template>
+            Earlier you ate <get name="food"/> so I assume you like that.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>ASK ME ANOTHER QUESTION</pattern>
+        <template>
+            <random>
+                <li>What kind of music do you like</li>
+                <li>What kind of food do you like</li>
+                <li>What kind of sports do you like</li>
+            </random>
+        </template>
+    </category>
+    
+    <category>
+        <that>What kind of music do you like</that>
+        <pattern>_</pattern>
+        <template>That is cool, I like Tachno!</template>
+    </category>
+    
+    <category>
+        <that>What kind of food do you like</that>
+        <pattern>_</pattern>
+        <template>That is delicious, I like Indian!</template>
+    </category>
+    
+    <category>
+        <that>What kind of sports do you like</that>
+        <pattern>_</pattern>
+        <template>That is awesome, I like Basketball!</template>
+    </category>
+    
+    <category>
+        <pattern>WHO CREATED YOU</pattern>
+        <template>I was created by <bot name="creator"/></template>
+    </category>
+    
+    <category>
+        <pattern>WHAT LANGUAGE ARE YOU PROGRAMMED IN</pattern>
+        <template>I am programmed in AIML</template>
+    </category>
+    
+    <category>
+        <pattern>FUN FACT ABOUT *</pattern>
+        <template>
+            <think><set name="country"><star/></set></think>
+            <condition name="country">
+                <li value="Argentina">Argentina has the highest ratio of psychologists per inhabitant. In Buenos Aires, there is even a district called âVille Freud.â</li>
+                <li value="Albania">In Albania, people nod their head for ânoâ and shake their head for âyesâ.</li>
+                <li value="Brazil">Brazilians have a strange hobby: opening Osama Bin Laden Bars. Like the âCaverna do Bin Ladenâ in Rio, for example. A Bin Laden lookalike even works here.</li>
+                <li value="Bangladesh">If children cheat during a test in Bangladesh, they could be sent to prison. There is also a replica of the Taj Mahal in Bangladesh, funded by the millionaire, Asanulla Moni.</li>
+                <li value="Switzerland">In Switzerland, there is a 500-year-old statue eating children: the Kinderlifresserbrunnen.</li>
+                <li value="Honduras">In Honduras, it is not uncommon to meet blond natives with blue eyes â they are descendants of the pirates.</li>
+                <li value="France">There is only one stop sign in all of Paris, and there is also a statue of liberty (like the one in New York). You can actually marry a dead person in Paris and it is also illegal to call a pig Napoleon.</li>
+                <li value="Icland">In Iceland, there is an âElf-Officerâ, who ensures that construction companies do not destroy any cultural property, for example, an âelf homeâ. Very respectful!</li>
+                <li value="Ethiopia">In Harar in Ethiopia, you can actually feed hyenas, because they are appreciated and honoured there rather than hated and expelled.</li>
+                <li value="Samoa">In Samoa, there is a tradition called âfaâafafineâ, which means that the youngest son is raised as a daughter if you have too many sons in the family.</li>
+                <li value="Ecuador">In Ecuador, the dustbin trucks play similar music to ice cream trucks in America.</li>
+                <li value="Sudan">In Sudan, there is a tradition of âghost marriage.â If a husband dies, his brother takes his place and marries the widow. All begotten children are regarded as descendants of the deceased. The same tradition even used to exist in China and France!</li>
+                <li value="Guatemala">According to legend, if a child of the Maya civilisation in Guatemala did not cry when he was born, he was to become a warrior.</li>
+                <li value="India">In India, many people find toilet paper unhygienic and prefer to use their left hand and a little bit of water. For that reason, this hand is considered âuncleanâ and is not used for eating!</li>
+                <li value="Haiti">Haiti is the only country, where Voodoo is a recognised religion.</li>
+                <li value="Monaco">You can walk the whole of Monaco from north to south in 52 minutes (according to Google Maps).</li>
+                <li value="Montenegro">Montenegro never had its own currency and initially used the âDeutsche Markâ. When the Euro was introduced, they simply adopted the currency although they were not part of the EU. But for some reason, it has never bothered anyone!</li>
+                <li value="Saudi Arabia">Saudi Arabia is the largest country in the world without a river.</li>
+                <li value="Tonga">Tonga is peculiar: if a brother and sister are alone in a room together, it is regarded as incest. Swimming on Sundays is forbidden and if a boy is talking alone with a girl, they are regarded as a couple.</li>
+                <li value="Germany">The longest published German word is (please read carefully): DonaudampfschifffahrtselektrizitÃ¤tenhauptbetriebswerkbauunterbeamtengesellschaft.</li>
+                <li value="Greece">The Greeks are very superstitious: if you receive a compliment, they believe the âevil eyeâ looks at you. To fend off the eye, they spit three times (supposedly at the complimenter). Thank you!</li>
+                <li value="Brunei">Itâs getting bigger: The Sultan of Brunei has 1500 rooms and 257 bathrooms in his palace, a wife, who is also his cousin, and has been sung to by Michael Jackson for 17 million dollars. Not forgetting that his name is 223 characters long: Kebawah Duli Yang Maha Mulia Paduka Seri Baginda Sultan Haji Hassanal Bolkiah Muâizzaddin Waddaulah ibni Al-Marhum Sultan Haji Omar âAli Saifuddien Saâadul Khairi Waddien, Sultan dan Yang Di-Pertuan Negara Brunei Darussalam.</li>
+                <li value="Afghanistan">Anyone in Afghanistan who is assigned the number 39 on his license plate will not have an easy time. You will be insulted as a pimp everywhere you go! The number is associated with prostitution.</li>
+                <li>No facts about <get name="country"></get> today :( </li>
+            </condition>
+            Source: https://www.holidayguru.ie 
+        </template>
+    </category>    
+    
+</aiml>

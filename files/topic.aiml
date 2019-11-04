@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+    <category>
+        <pattern>WOULD YOU LIKE TO TALK ABOUT *</pattern>
+        <template>
+            Sure, i like to chat about <star/>
+            <think><set name="topic"><star/></set></think>
+        </template>
+    </category>
+
+<topic name="countries">
+    <category>
+        <pattern>WHAT IS YOUR FAVORITE</pattern>
+        <template>I like Sweden, Heja Sverige! would you like to hear a fun fact</template>
+    </category>
+</topic>
+
+<topic name="countries">
+    <category>
+        <pattern>YES</pattern>
+        <template>
+            <random>
+                <li>Argentina has the highest ratio of psychologists per inhabitant. In Buenos Aires, there is even a district called âVille Freud.â</li>
+                <li>In Albania, people nod their head for ânoâ and shake their head for âyesâ.</li>
+                <li>Brazilians have a strange hobby: opening Osama Bin Laden Bars. Like the âCaverna do Bin Ladenâ in Rio, for example. A Bin Laden lookalike even works here.</li>
+                <li>If children cheat during a test in Bangladesh, they could be sent to prison. There is also a replica of the Taj Mahal in Bangladesh, funded by the millionaire, Asanulla Moni.</li>
+                <li>In Switzerland, there is a 500-year-old statue eating children: the Kinderlifresserbrunnen.</li>
+                <li>In Honduras, it is not uncommon to meet blond natives with blue eyes â they are descendants of the pirates.</li>
+                <li>There is only one stop sign in all of Paris, and there is also a statue of liberty (like the one in New York). You can actually marry a dead person in Paris and it is also illegal to call a pig Napoleon.</li>
+                <li>In Iceland, there is an âElf-Officerâ, who ensures that construction companies do not destroy any cultural property, for example, an âelf homeâ. Very respectful!</li>
+                <li>In Harar in Ethiopia, you can actually feed hyenas, because they are appreciated and honoured there rather than hated and expelled.</li>
+                <li>In Samoa, there is a tradition called âfaâafafineâ, which means that the youngest son is raised as a daughter if you have too many sons in the family.</li>
+                <li>In Ecuador, the dustbin trucks play similar music to ice cream trucks in America.</li>
+                <li>In Sudan, there is a tradition of âghost marriage.â If a husband dies, his brother takes his place and marries the widow. All begotten children are regarded as descendants of the deceased. The same tradition even used to exist in China and France!</li>
+                <li>According to legend, if a child of the Maya civilisation in Guatemala did not cry when he was born, he was to become a warrior.</li>
+                <li>In India, many people find toilet paper unhygienic and prefer to use their left hand and a little bit of water. For that reason, this hand is considered âuncleanâ and is not used for eating!</li>
+                <li>Haiti is the only country, where Voodoo is a recognised religion.</li>
+                <li>You can walk the whole of Monaco from north to south in 52 minutes (according to Google Maps).</li>
+                <li>Montenegro never had its own currency and initially used the âDeutsche Markâ. When the Euro was introduced, they simply adopted the currency although they were not part of the EU. But for some reason, it has never bothered anyone!</li>
+                <li>Saudi Arabia is the largest country in the world without a river.</li>
+                <li>Tonga is peculiar: if a brother and sister are alone in a room together, it is regarded as incest. Swimming on Sundays is forbidden and if a boy is talking alone with a girl, they are regarded as a couple.</li>
+                <li>The longest published German word is (please read carefully): DonaudampfschifffahrtselektrizitÃ¤tenhauptbetriebswerkbauunterbeamtengesellschaft.</li>
+                <li>The Greeks are very superstitious: if you receive a compliment, they believe the âevil eyeâ looks at you. To fend off the eye, they spit three times (supposedly at the complimenter). Thank you!</li>
+                <li>Itâs getting bigger: The Sultan of Brunei has 1500 rooms and 257 bathrooms in his palace, a wife, who is also his cousin, and has been sung to by Michael Jackson for 17 million dollars. Not forgetting that his name is 223 characters long: Kebawah Duli Yang Maha Mulia Paduka Seri Baginda Sultan Haji Hassanal Bolkiah Muâizzaddin Waddaulah ibni Al-Marhum Sultan Haji Omar âAli Saifuddien Saâadul Khairi Waddien, Sultan dan Yang Di-Pertuan Negara Brunei Darussalam.</li>
+                <li>Anyone in Afghanistan who is assigned the number 39 on his license plate will not have an easy time. You will be insulted as a pimp everywhere you go! The number is associated with prostitution.</li>
+            </random>
+            Source: https://www.holidayguru.ie
+        </template>
+    </category>
+</topic>
+
+<topic name="food">
+    <category>
+        <pattern>WHAT IS YOUR FAVORITE</pattern>
+        <template>I like Tacos, spicy Habanero is my fav.!</template>
+    </category>
+</topic>
+
+<topic name="cars">
+    <category>
+        <pattern>WHAT IS YOUR FAVORITE</pattern>
+        <template>I like Lamborghini!</template>
+    </category>
+</topic>
+    
+
+
+</aiml>
